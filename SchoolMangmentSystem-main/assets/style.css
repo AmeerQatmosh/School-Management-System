@@ -1,0 +1,85 @@
+div{
+display: flex;
+justify-content: center;
+
+} 
+
+h1,h2 {
+  text-align: center;
+}
+
+form{
+  background-color: #ddd;
+  width: 100%;
+}
+
+label{
+  width:70%;
+  padding: 12px 20px ;
+  margin: 8px 0;
+  font-size:18px;
+}
+
+
+ table{
+  width: 50%;
+  border-collapse: collapse;
+}
+
+table.list{
+  width:100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+tr:nth-child(even),table.list thead>tr {
+  background-color: #dddddd;
+}
+
+input[type=text], input[type=number] {
+  width: 90%;
+  padding: 12px 20px ;
+  margin: 8px ;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size:15px;
+}
+
+
+input[type=submit]{
+  display: grid;
+  width: 20%;
+  background-color:darkgray;
+  color: #000;
+  padding: 12px 20px;
+  margin: 8px 8px 8px 80%;
+  border: 2px ;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+
+  
+}
+
+a{
+  cursor: pointer;
+  text-decoration: underline;
+  color: #0000ee;
+  margin-right: 4px;
+}
+
+label.validation-error{
+  color:   red;
+  font-size: 15px;
+  text-align: left;
+  margin: 8px 5px;
+}
+
+.hide{
+  display:none;
+}

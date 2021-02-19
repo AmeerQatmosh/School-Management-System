@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- External CSS --> 	
+		 <link rel="stylesheet" type="text/css" href="assets/style.css">  
+		<!-- External CSS --> 	
+
+
+		<title>School Managment System</title>
+		<style>
+* {
+  box-sizing:border-box;
+}
+
+
+
+.main {
+	justify-content: center;
+margin: auto;
+  width:60%; /* The width is 60%, by default */
+}
+
+
+
+/* Use a media query to add a break point at 800px: */
+@media screen and (max-width:800px) {
+ .main {
+    width:100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+</style>
+	</head>
+
+	<body>
+
+		<h1>School Managment System </h1>
+<div class = "main">
+		
+			<form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+		    <h2> Student GDPA Form </h2>
+			<div>
+				<label>Student Name:</label>
+				<input type="text" name="name" id="name"  />
+			</div>
+			
+			<label class="validation-error hide" id="nameValidationError">This field is required.</label>
+
+			<div>
+				<label>Student ID:</label>
+				<input type="number" name="idNumber" id="idNumber"  />
+			</div>
+
+			<div>
+			    <label>Student GDPA:</label>
+	     	    <input type="number" name="gdpa" id="gdpa"  />
+			</div>
+					 
+			<div  class="form-action-buttons">
+				<input  type="submit" value="Submit">
+			</div>
+
+			</form>
+		    
+</div>
+
+</br>
+		
+<div class="main">
+	<table class="list" id="studentList">
+	<thead>
+	<tr>
+		<th>Student Name:</th>
+		<th>Student ID:</th>
+		<th>Student GDPA:</th>
+		<th>Edit:</th>
+		<th>Delete:</th>
+	</tr>
+    </thead>
+	<tbody>
+    </tbody>
+				
+    </table>
+	</td>
+	</tr>
+    </table>
+</div>
+		<script src="./src/main.js"></script>
+	</body>
+</html>
