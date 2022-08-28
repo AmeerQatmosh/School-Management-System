@@ -3,7 +3,7 @@ Task, Assignment for Team Project 2 course
 ![image](https://user-images.githubusercontent.com/68341128/187083712-8d169c1c-acbb-4cf2-931b-a7804ceabc74.png)
 
 # User Input Demo:
-### Fill Form then clicking Submit: 
+### Fill Form then click Submit: 
 ![image](https://user-images.githubusercontent.com/68341128/187083752-90d23421-0659-415c-bd01-1a07d4f4bb04.png)
 ### View Submission record in the table at the bottom of the form:
 ![image](https://user-images.githubusercontent.com/68341128/187084533-24b83d69-95ce-4f58-8ee9-570ddd78fff4.png)
