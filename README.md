@@ -1,6 +1,6 @@
 # School-Management-System
 ## Task, Assignment for Team Project 2 course
-### Check this link for a Demo: https://ameerqatmosh.github.io/School-Managment-System/
+### Check this link for a Demo: https://ameerqatmosh.github.io/School-Management-System/
 ![image](https://user-images.githubusercontent.com/68341128/187083712-8d169c1c-acbb-4cf2-931b-a7804ceabc74.png)
 
 # User Input Demo:
