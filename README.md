@@ -1,27 +1,28 @@
 # School-Management-System
 ## Task, Assignment for Team Project 2 course
 ### Check this link for a Demo: https://ameerqatmosh.github.io/School-Management-System/
-![image](https://user-images.githubusercontent.com/68341128/187083712-8d169c1c-acbb-4cf2-931b-a7804ceabc74.png)
+![image](https://github.com/AmeerQatmosh/School-Management-System/assets/68341128/fa2e00ef-0820-4b77-befa-a058713cfd0a)
 
 # User Input Demo:
 ### Fill Form then click Submit: 
-![image](https://user-images.githubusercontent.com/68341128/187083752-90d23421-0659-415c-bd01-1a07d4f4bb04.png)
+![image](https://github.com/AmeerQatmosh/School-Management-System/assets/68341128/2cfc67c3-6926-4d70-96e0-d688e222a67c)
 ### View the Submission record in the table at the bottom of the form:
-![image](https://user-images.githubusercontent.com/68341128/187084533-24b83d69-95ce-4f58-8ee9-570ddd78fff4.png)
+![image](https://github.com/AmeerQatmosh/School-Management-System/assets/68341128/d2934fea-5626-4d4f-a696-4c7efbf390ea)
 ### Edit the Submission record form by clicking Edit:
-![image](https://user-images.githubusercontent.com/68341128/187084003-ed063edb-a3d2-433a-baf8-00c2bbb85b25.png)
+![image](https://github.com/AmeerQatmosh/School-Management-System/assets/68341128/9a3e5ffc-37ed-41d3-83b8-f1ad7be0cb0c)
 ### By Clicking Edit, will show the form with the previous submission record with the ability to edit/update the record fields:
-![image](https://user-images.githubusercontent.com/68341128/187084064-cb4396e3-218f-4b5c-88a0-233a080292b9.png)
+![image](https://github.com/AmeerQatmosh/School-Management-System/assets/68341128/56c1c594-5d1b-419e-9bbd-9ae8b21f9275)
 ### By Updating the record fields:
-![image](https://user-images.githubusercontent.com/68341128/187084225-2665c8ee-e6e2-457f-941c-b6056be6ec04.png)
+![image](https://github.com/AmeerQatmosh/School-Management-System/assets/68341128/b53d17ef-3120-4c08-bb7b-f1dde8cc5e16)
 ### After clicking submit, the record will be successfully updated:
-![image](https://user-images.githubusercontent.com/68341128/187084621-805f9919-1aeb-4c5b-85d0-142aaa02ee90.png)
+![image](https://github.com/AmeerQatmosh/School-Management-System/assets/68341128/8b4d1149-0cba-483e-82fe-7787d0c5929b)
 ### By Clicking Delete:
-![image](https://user-images.githubusercontent.com/68341128/187084556-dfb23f29-1571-422f-b200-c289aa3749dd.png)
+![image](https://github.com/AmeerQatmosh/School-Management-System/assets/68341128/aeab5f0c-85dd-464c-8f0d-2053ba0bc40a)
 ### A pop-up window will show and ask to confirm deleting the record by clicking OK.
-![image](https://user-images.githubusercontent.com/68341128/187084339-034be54c-9ec0-4a74-b5f1-8f9117e8ed16.png)
+![image](https://github.com/AmeerQatmosh/School-Management-System/assets/68341128/623d14af-b220-498c-ab26-9d82e016ee21)
 ### After clicking OK, the record will be successfully deleted.
-![image](https://user-images.githubusercontent.com/68341128/187084397-78543687-b6f1-450a-89a5-f1031a3852eb.png)
+![image](https://github.com/AmeerQatmosh/School-Management-System/assets/68341128/b92b1f39-01da-47e8-bc02-5157486433f3)
+
 
 
 
