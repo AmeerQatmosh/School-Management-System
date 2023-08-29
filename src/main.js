@@ -16,7 +16,7 @@ function readFormData() {
     var students = {};
     students["name"] = document.getElementById("name").value;
     students["idNumber"] = document.getElementById("idNumber").value;
-    students["gdpa"] = document.getElementById("gdpa").value;
+    students["gpa"] = document.getElementById("gpa").value;
     return students;
 }
 
@@ -28,7 +28,7 @@ function insertNewRecord(data) {
     cell2 = newRow.insertCell(1);
     cell2.innerHTML = data.idNumber;
     cell3 = newRow.insertCell(2);
-    cell3.innerHTML = data.gdpa;
+    cell3.innerHTML = data.gpa;
     cell3 = newRow.insertCell(3);
     cell3.innerHTML = `<a onClick="onEdit(this)">Edit</a>`;
 	cell4 = newRow.insertCell(4);
@@ -39,7 +39,7 @@ function insertNewRecord(data) {
 function resetForm() {
     document.getElementById("name").value = "";
     document.getElementById("idNumber").value = "";
-    document.getElementById("gdpa").value = "";
+    document.getElementById("gpa").value = "";
     selectedRow = null;
 }
 
@@ -47,12 +47,12 @@ function onEdit(td) {
     selectedRow = td.parentElement.parentElement;
     document.getElementById("name").value = selectedRow.cells[0].innerHTML;
     document.getElementById("idNumber").value = selectedRow.cells[1].innerHTML;
-    document.getElementById("gdpa").value = selectedRow.cells[2].innerHTML;
+    document.getElementById("gpa").value = selectedRow.cells[2].innerHTML;
 }
 function updateRecord(students) {
     selectedRow.cells[0].innerHTML = students.name;
     selectedRow.cells[1].innerHTML = students.idNumber;
-    selectedRow.cells[2].innerHTML = students.gdpa;
+    selectedRow.cells[2].innerHTML = students.gpa;
 }
 
 function onDelete(td) {
