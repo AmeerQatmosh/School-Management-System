@@ -38,37 +38,29 @@ margin: auto;
 	<body>
 
 		<h1>School Managment System </h1>
-<div class = "main">
-		
+		<div class = "main">
 			<form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
 		    <h2> Student GDPA Form </h2>
 			<div>
 				<label>Student Name:</label>
 				<input type="text" name="name" id="name"  />
 			</div>
-			
-			<label class="validation-error hide" id="nameValidationError">This field is required.</label>
 
+			<label class="validation-error hide" id="nameValidationError">This field is required.</label>
 			<div>
 				<label>Student ID:</label>
 				<input type="number" name="idNumber" id="idNumber"  />
 			</div>
-
 			<div>
 			    <label>Student GDPA:</label>
 	     	    <input type="number" name="gdpa" id="gdpa"  />
-			</div>
-					 
+			</div>	 
 			<div  class="form-action-buttons">
 				<input  type="submit" value="Submit">
 			</div>
-
 			</form>
-		    
 </div>
-
-</br>
-		
+</br>	
 <div class="main">
 	<table class="list" id="studentList">
 	<thead>

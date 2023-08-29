@@ -53,18 +53,24 @@ input[type=text], input[type=number] {
 
 input[type=submit]{
   display: grid;
+  transition-duration: 0.4s;
   width: 20%;
-  background-color:darkgray;
-  color: #000;
+  background-color:white;
+  color: black;
+  border: 1px solid #008CBA;
   padding: 12px 20px;
   margin: 8px 8px 8px 80%;
-  border: 2px ;
   border-radius: 4px;
   cursor: pointer;
   font-size: 15px;
-
-  
 }
+
+input[type=submit]:hover{
+  background-color:#008CBA;
+  color: white;
+}
+
+
 
 a{
   cursor: pointer;
