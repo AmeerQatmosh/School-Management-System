@@ -29,10 +29,10 @@ function insertNewRecord(data) {
     cell2.innerHTML = data.idNumber;
     cell3 = newRow.insertCell(2);
     cell3.innerHTML = data.gpa;
-    cell3 = newRow.insertCell(3);
-    cell3.innerHTML = `<a onClick="onEdit(this)">Edit</a>`;
-	cell4 = newRow.insertCell(4);
-    cell4.innerHTML = `<a onClick="onDelete(this)">Delete</a>`;
+    cell4 = newRow.insertCell(3);
+    cell4.innerHTML = `<a onClick="onEdit(this)">Edit</a>`;
+	cell5 = newRow.insertCell(4);
+    cell5.innerHTML = `<a onClick="onDelete(this)" style="color: red;">Delete</a>`;
 					   
 }
 

@@ -1,91 +1,94 @@
 div{
-<<<<<<< HEAD
   display: flex;
   justify-content: center;
+  
   } 
   
   h1,h2 {
     text-align: center;
-    color: #008CBA;
   }
   
   form{
-    background-color: lightblue;
+    background-color: rgb(155, 210, 244);
     width: 100%;
-    border: 1px solid#008CBA;
-    border-radius: 10px;
+    border-radius: 5px;
+    margin: 70px 0 0 0 ;
   }
   
   label{
-    width:50%;
+    width:70%;
     padding: 12px 20px ;
-    margin: 8px 8px;
-    font-size:16px;
-    color: #008CBA;
+    margin: 8px;
+    font-size:18px;
   }
+  
   
    table{
     width: 50%;
     border-collapse: collapse;
-    border-radius: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    border-spacing: 0;
   }
   
   table.list{
     width:100%;
   }
-  th {
-    background-color: lightblue;
+  
+  td, th {
+    border: 1px;
     text-align: center;
     padding: 8px;
-    color:#008CBA;
-    font-size: 18px;
+
   }
-  td {
-    text-align: center;
-    padding: 8px;
-  }
+
+  
   tr:nth-child(even),table.list thead>tr {
-    background-color: lightblue;
-  
+    background-color: rgb(155, 210, 244);
   }
   
-  input[type=text], input[type=number]{
-    width: 100%;
-    padding: 12px 20px;
-    margin: 9px 30px;
+  input[type=text], input[type=number] {
+    width: 90%;
+    padding: 12px 20px ;
+    margin: 8px 30px;
     display: inline-block;
-    border: 1px solid #008CBA;
+    border: 1px solid white;
     border-radius: 4px;
     box-sizing: border-box;
     font-size:15px;
   }
   
+  
   input[type=submit]{
-    width: 100%;
-    background-color:#008CBA;
-    color: white;
-    border: 1px solid #008CBA;
-    padding: 12px 20px;
-    margin: 9px 30px;
+    display: grid;
+    width: 20%;
+    background-color:white;
+    color: rgb(0, 183, 255);
+    padding: 12px 0;
+    margin: 8px 28px 8px 80%;
+    border: 1px solid rgb(0, 183, 255);
     border-radius: 4px;
     cursor: pointer;
     font-size: 15px;
-    box-sizing: border-box;
-  
-  
   }
-  
+
   input[type=submit]:hover{
-    background-color:white;
-    color: #008CBA;
+    background-color:rgb(36, 160, 237);
+    color:white;
+
   }
   
   a{
     cursor: pointer;
-    text-decoration: underline;
-    color: #008CBA;
+    text-decoration: none;
+    color: rgb(51,102,204);
     margin-right: 4px;
   }
+  a:hover{
+    text-decoration: underline;
+  }
+
+
   
   label.validation-error{
     color:   red;
@@ -97,102 +100,3 @@ div{
   .hide{
     display:none;
   }
-=======
-display: flex;
-justify-content: center;
-} 
-
-h1,h2 {
-  text-align: center;
-  color: #008CBA;
-}
-
-form{
-  background-color: lightblue;
-  width: 100%;
-  border: 1px solid#008CBA;
-  border-radius: 10px;
-}
-
-label{
-  width:50%;
-  padding: 12px 20px ;
-  margin: 8px 8px;
-  font-size:18px;
-  color: #008CBA;
-}
-
- table{
-  width: 50%;
-  border-collapse: collapse;
-  border-radius: 10px;
-}
-
-table.list{
-  width:100%;
-}
-th {
-  background-color: lightblue;
-  text-align: center;
-  padding: 8px;
-  color:#008CBA;
-  font-size: 18px;
-}
-td {
-  text-align: center;
-  padding: 8px;
-}
-tr:nth-child(even),table.list thead>tr {
-  background-color: lightblue;
-
-}
-
-input[type=text], input[type=number]{
-  width: 100%;
-  padding: 12px 20px;
-  margin: 9px 30px;
-  display: inline-block;
-  border: 1px solid #008CBA;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-size:15px;
-}
-
-input[type=submit]{
-  display: inline-block;
-  width: 100%;
-  background-color:white;
-  color: #008CBA;
-  border: 1px solid #008CBA;
-  padding: 12px 20px;
-  margin: 9px 30px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 15px;
-  box-sizing: border-box;
-
-}
-
-input[type=submit]:hover{
-  background-color:#008CBA;
-  color: white;
-}
-
-a{
-  cursor: pointer;
-  text-decoration: underline;
-  color: #008CBA;
-  margin-right: 4px;
-}
-
-label.validation-error{
-  color:   red;
-  font-size: 15px;
-  text-align: left;
-  margin: 8px 5px;
-}
-
-.hide{
-  display:none;
-}
->>>>>>> 71cc623e7105f859a0f9d54772dfd03090dae2bc
