@@ -10,7 +10,7 @@
 		<!-- External CSS --> 	
 
 
-		<title>School Managment System</title>
+		<title>School Management System</title>
 		<style>
 * {
   box-sizing:border-box;
@@ -37,39 +37,40 @@ margin: auto;
 
 	<body>
 
-		<h1>School Managment System </h1>
+		<h1>School Management System </h1>
 		<div class = "main">
 			<form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
-		    <h2> Student GDPA Form </h2>
+		    <h2> Student GPA Form </h2>
 			<div>
 				<label>Student Name:</label>
 				<input type="text" name="name" id="name"  />
 			</div>
-
-			<label class="validation-error hide" id="nameValidationError">This field is required.</label>
+			<label class="validation-error hide" id="nameValidationError">! This field is required.</label>
 			<div>
 				<label>Student ID:</label>
 				<input type="number" name="idNumber" id="idNumber"  />
 			</div>
 			<div>
-			    <label>Student GDPA:</label>
-	     	    <input type="number" name="gdpa" id="gdpa"  />
-			</div>	 
-			<div  class="form-action-buttons">
+			    <label>Student GPA:</label>
+	     	    <input type="number" name="gpa" id="gpa"  />
+			</div>	
+
+			<div>
+				<label></label>
 				<input  type="submit" value="Submit">
 			</div>
 			</form>
-</div>
+		</div>
 </br>	
 <div class="main">
 	<table class="list" id="studentList">
 	<thead>
 	<tr>
-		<th>Student Name:</th>
-		<th>Student ID:</th>
-		<th>Student GDPA:</th>
-		<th>Edit:</th>
-		<th>Delete:</th>
+		<th>Student Name</th>
+		<th>Student ID</th>
+		<th>Student GPA</th>
+		<th>Edit</th>
+		<th>Delete</th>
 	</tr>
     </thead>
 	<tbody>
