@@ -88,7 +88,7 @@ function validate() {
 document.getElementById("confirmDelete").addEventListener("click", confirmDelete);
 document.getElementById("cancelDelete").addEventListener("click", closeModal);
 document.querySelector(".close").addEventListener("click", closeModal);
-window.addEventListener("click", function(event) {
+window.addEventListener("click", function (event) {
     if (event.target == document.getElementById("deleteModal")) {
         closeModal();
     }

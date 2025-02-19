@@ -5,7 +5,8 @@ div {
 
 }
 
-h1, h2 {
+h1,
+h2 {
   text-align: center;
   font-family: 'Arial', sans-serif;
   color: #333;
@@ -46,19 +47,23 @@ table.list {
   width: 100%;
 }
 
-td, th {
-  border: 1px solid #ddd; /* Changed border color */
+td,
+th {
+  border: 1px solid #ddd;
+  /* Changed border color */
   text-align: center;
   padding: 12px;
   font-family: 'Arial', sans-serif;
   color: #333;
 }
 
-tr:nth-child(even), table.list thead > tr {
+tr:nth-child(even),
+table.list thead>tr {
   background-color: #f0f8ff;
 }
 
-input[type=text], input[type=number] {
+input[type=text],
+input[type=number] {
   width: calc(100% - 60px);
   padding: 12px 20px;
   margin: 8px 30px;
@@ -164,7 +169,8 @@ button {
 #confirmDelete {
   background-color: #d9534f;
   color: white;
-  &:hover{
+
+  &:hover {
     background-color: #f55d57;
   }
 }
@@ -172,7 +178,8 @@ button {
 #cancelDelete {
   background-color: #5bc0de;
   color: white;
-  &:hover{
+
+  &:hover {
     background-color: #61cdee;
   }
 }
