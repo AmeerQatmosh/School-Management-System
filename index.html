@@ -16,8 +16,6 @@
   box-sizing:border-box;
 }
 
-
-
 .main {
 	justify-content: center;
 margin: auto;
@@ -56,7 +54,7 @@ margin: auto;
 
 			<div>
 			    <label>Student GPA:</label>
-	     	    <input type="number" name="gpa" id="gpa"  />
+	     	    <input type="number" name="gpa" id="gpa" min="0.0" max="4.0" step="0.01"/>
 			</div>
 
 			<div  class="form-action-buttons">
@@ -68,6 +66,16 @@ margin: auto;
 </div>
 
 </br>
+
+<!-- Modal HTML -->
+<div id="deleteModal" class="modal">
+	<div class="modal-content">
+	  <span class="close">&times;</span>
+	  <p>Are you sure you want to delete this record?</p>
+	  <button id="confirmDelete">Yes</button>
+	  <button id="cancelDelete">No</button>
+	</div>
+  </div>
 
 <div class="main">
 	<table class="list" id="studentList">
