@@ -37,6 +37,9 @@ function insertNewRecord(data) {
     newRow.insertCell(2).textContent = data.gpa;
     newRow.insertCell(3).innerHTML = `<a onClick="onEdit(this)">Edit</a>`;
     newRow.insertCell(4).innerHTML = `<a onClick="onDelete(this)" style="color: red;">Delete</a>`;
+
+    // Store in LocalStorage
+    saveData();
 }
 
 function resetForm() {
@@ -67,6 +70,11 @@ function updateRecord(student) {
 
 function onDelete(td) {
     rowToDelete = td.parentElement.parentElement;
+
+        const modalText = document.querySelector("#deleteModal p");
+    modalText.textContent = "Are you sure you want to delete this record?"; // Keep original text
+    
+    document.getElementById("confirmDelete").onclick = confirmDelete;
     document.getElementById("deleteModal").style.display = "block";
 }
 
@@ -139,3 +147,142 @@ document.querySelector(".close").addEventListener("click", closeModal);
 window.addEventListener("click", event => {
     if (event.target == document.getElementById("deleteModal")) closeModal();
 });
+
+function showClearConfirmation() {
+    const modalText = document.querySelector("#deleteModal p"); // Selects the <p> inside modal
+    modalText.textContent = "Are you sure you want to delete all records?";
+
+    document.getElementById("confirmDelete").onclick = clearAllData;
+    document.getElementById("deleteModal").style.display = "block";
+}
+
+
+function clearAllData() {
+    students = [];
+    saveToLocalStorage();
+    loadTable();
+    closeModal();
+}
+
+
+
+// ************************************************ Import/Export ************************************************************** //
+
+// Export to JSON
+function exportToJSON() {
+    const jsonData = JSON.stringify(students, null, 2);
+    downloadFile(jsonData, "students.json", "application/json");
+}
+
+// Export to CSV
+function exportToCSV() {
+    let csv = "Student Name,Student ID,Student GPA\n";
+    students.forEach(student => {
+        csv += `${student.name},${student.idNumber},${student.gpa}\n`;
+    });
+    downloadFile(csv, "students.csv", "text/csv");
+}
+
+// Download file
+function downloadFile(content, filename, contentType) {
+    const blob = new Blob([content], { type: contentType });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
+
+// Import JSON/CSV file
+function importFile(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = function (e) {
+        const content = e.target.result;
+        if (file.name.endsWith(".json")) {
+            importFromJSON(content);
+        } else if (file.name.endsWith(".csv")) {
+            importFromCSV(content);
+        }
+    };
+    reader.readAsText(file);
+}
+
+// Import JSON
+function importFromJSON(jsonContent) {
+    try {
+        const importedData = JSON.parse(jsonContent);
+        students = [...students, ...importedData]; // Merge new data
+        saveToLocalStorage();
+        location.reload(); // Reload page to update table
+    } catch (error) {
+        alert("Invalid JSON file format.");
+    }
+}
+
+// Import CSV
+function importFromCSV(csvContent) {
+    const lines = csvContent.split("\n").slice(1); // Skip header row
+    const newStudents = [];
+
+    lines.forEach(line => {
+        const [name, idNumber, gpa] = line.split(",");
+        if (name && idNumber && gpa) {
+            const student = { name: name.trim(), idNumber: idNumber.trim(), gpa: gpa.trim() };
+            newStudents.push(student);
+        }
+    });
+
+    // Merge the new data with the existing data
+    students = [...students, ...newStudents];
+    saveToLocalStorage();
+    loadTable(); // Refresh the table without reloading the page
+}
+
+
+
+
+
+
+
+//**************************************************************************************************** */ //
+
+
+
+
+function loadData() {
+    var storedData = localStorage.getItem("students");
+    if (storedData) {
+        students = JSON.parse(storedData);
+        
+        // Clear existing table rows before inserting data
+        var table = document.getElementById("studentList").getElementsByTagName("tbody")[0];
+        table.innerHTML = "";
+
+        students.forEach(insertNewRecord);
+    }
+}
+
+window.onload = loadData;
+
+
+function saveData() {
+    var table = document.getElementById("studentList").getElementsByTagName("tbody")[0];
+    var rows = table.getElementsByTagName("tr");
+    students = [];
+    
+    for (var i = 0; i < rows.length; i++) {
+        var cells = rows[i].getElementsByTagName("td");
+        var student = {
+            name: cells[0].textContent,
+            idNumber: cells[1].textContent,
+            gpa: cells[2].textContent
+        };
+        students.push(student);
+    }
+
+    localStorage.setItem("students", JSON.stringify(students));
+}

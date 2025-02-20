@@ -14,6 +14,7 @@ h2 {
 
 form {
   background-color: #f0f8ff;
+  border: 1px solid #ddd;
   width: 100%;
   max-width: 700px;
   border-radius: 10px;
@@ -171,7 +172,16 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  background-color: #e0f0fe;
+  border: 1px solid #ddd;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  &:hover {
+    background-color: #afd4f5;
+  }
 }
+
+
 
 #confirmDelete {
   background-color: #d9534f;
