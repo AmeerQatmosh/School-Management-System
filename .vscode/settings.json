@@ -1,3 +1,4 @@
 {
-    "colorWheel.settings.workspaceColor": "hsl(277,90%,35%)"
+    "colorWheel.settings.workspaceColor": "hsl(277,90%,35%)",
+    "livePreview.defaultPreviewPath": "/index.html"
 }
