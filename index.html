@@ -67,6 +67,16 @@ margin: auto;
 
 </br>
 
+<div>
+    <button onclick="exportToJSON()">Export as JSON</button>
+    <button onclick="exportToCSV()">Export as CSV</button>
+    <input type="file" id="importFile" accept=".json, .csv" style="display: none;" onchange="importFile(event)">
+    <button onclick="document.getElementById('importFile').click()">Import JSON/CSV</button>
+	<button class="button" type="button" style="color: red;" onclick="showClearConfirmation()">Clear All Data</button>
+</div>
+
+
+
 <!-- Modal HTML -->
 <div id="deleteModal" class="modal">
 	<div class="modal-content">
@@ -76,6 +86,10 @@ margin: auto;
 	  <button id="cancelDelete">No</button>
 	</div>
   </div>
+
+
+
+
 
 <div class="main">
 	<table class="list" id="studentList">
