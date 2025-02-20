@@ -1,3 +1,93 @@
+/* Default light mode */
+body {
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark mode */
+body.dark-mode {
+  background-color: #111827;
+  color: white;
+}
+
+/* Additional elements */
+body.dark-mode h1 {
+  color: lightgray;
+}
+
+body.dark-mode h2 {
+  color: lightgray;
+}
+
+body.dark-mode p {
+  color: lightgray;
+}
+
+body.dark-mode form {
+  background-color: #1f2937;
+  border: none;
+}
+
+body.dark-mode label {
+  color: lightgray;
+}
+
+body.dark-mode input[type=text] {
+  background-color: #4b5563;
+  color: white;
+  border: 1px solid white;
+}
+
+body.dark-mode input[type=number] {
+  background-color: #4b5563;
+  color: white;
+  border: 1px solid white;
+}
+
+body.dark-mode input[type=submit] {
+  background-color: #0099cc;
+  color: white;
+
+  &:hover {
+    background-color: #0077aa;
+  }
+}
+
+body.dark-mode button {
+  background-color: #2b394c;
+  border: none;
+  color: #ddd;
+
+  &:hover {
+    background-color: #4b6282;
+  }
+}
+
+.deletebutton {
+  color: red;
+}
+
+body.dark-mode .deletebutton {
+  color: #ff9999;
+}
+
+body.dark-mode th {
+  background-color: #1f2937;
+  color: lightgray;
+  border: 1px solid #ddd;
+}
+
+body.dark-mode tr:nth-child(even),
+table.list thead>tr {
+  background-color: #1f2937;
+}
+
+body.dark-mode td {
+  color: lightgray;
+}
+
+
 div {
   display: flex;
   justify-content: center;
@@ -12,6 +102,7 @@ h2 {
   color: #333;
 }
 
+
 form {
   background-color: #f0f8ff;
   border: 1px solid #ddd;
@@ -22,6 +113,7 @@ form {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 70px 0 0 0;
 }
+
 
 label {
   width: 100%;
@@ -107,11 +199,27 @@ a:hover {
   text-decoration: underline;
 }
 
+body.dark-mode a {
+  color: #99ccff;
+}
+
+.delete-link {
+  color: red;
+}
+
+body.dark-mode .delete-link {
+  color: #ff9999;
+}
+
 label.validation-error {
   color: red;
   font-size: 15px;
   text-align: left;
   margin: 8px 5px;
+}
+
+body.dark-mode label.validation-error {
+  color: #ff9999;
 }
 
 .hide {
@@ -133,6 +241,7 @@ label.validation-error {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+
 .modal-content {
   background-color: #fefefe;
   margin: 15% auto;
@@ -143,6 +252,12 @@ label.validation-error {
   text-align: center;
   border-radius: 10px;
 }
+
+body.dark-mode .modal-content {
+  background-color: #1f2937;
+  border: nano;
+}
+
 .modal-content p {
   font-size: 15px;
   font-family: 'Arial', sans-serif;
@@ -160,7 +275,14 @@ label.validation-error {
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+body.dark-mode .close:hover,
+.close:focus {
+  color: #ff9999;
   text-decoration: none;
   cursor: pointer;
 }
@@ -176,6 +298,7 @@ button {
   border: 1px solid #ddd;
   color: #333;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
   &:hover {
     background-color: #afd4f5;
   }
@@ -184,19 +307,103 @@ button {
 
 
 #confirmDelete {
-  background-color: #d9534f;
-  color: white;
+  background-color: transparent;
+  color: #d9534f;
+  border: 1px solid #d9534f;
 
   &:hover {
     background-color: #f55d57;
+    color: white;
+  }
+}
+
+body.dark-mode #confirmDelete {
+  background-color: transparent;
+  border: 1px solid #d9534f;
+  color: #d9534f;
+
+  &:hover {
+    background-color: #d9534f;
+    color: white;
   }
 }
 
 #cancelDelete {
-  background-color: #5bc0de;
+  background-color: transparent;
   color: white;
+  border: 1px solid #5bc0de;
+  color: #5bc0de;
 
   &:hover {
-    background-color: #61cdee;
+    background-color: #a7dbeb;
+    color: white;
   }
+}
+
+body.dark-mode #cancelDelete {
+  background-color: transparent;
+  border: 1px solid #5bc0de;
+  color: #5bc0de;
+
+  &:hover {
+    background-color: #b3d9ff;
+    color: white;
+  }
+}
+
+#darkModeToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#darkModeToggle:hover {
+  background: #555;
+}
+
+@media screen and (max-width: 600px) {
+  #darkModeToggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #333;
+    color: white;
+    padding:  10px 15px;
+    cursor: pointer;
+  }
+}
+
+/*  Back to top */
+
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  display: none; /* Hidden by default */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect */
+#backToTop:hover {
+  background: #555;
+  transform: scale(1.1);
+}
+
+/* Show button when scrolling */
+.show {
+  display: block !important;
 }

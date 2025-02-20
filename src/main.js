@@ -36,7 +36,7 @@ function insertNewRecord(data) {
     newRow.insertCell(1).textContent = data.idNumber;
     newRow.insertCell(2).textContent = data.gpa;
     newRow.insertCell(3).innerHTML = `<a onClick="onEdit(this)">Edit</a>`;
-    newRow.insertCell(4).innerHTML = `<a onClick="onDelete(this)" style="color: red;">Delete</a>`;
+    newRow.insertCell(4).innerHTML = `<a onClick="onDelete(this)"  class="delete-link">Delete</a>`;
 
     // Store in LocalStorage
     saveData();
@@ -286,3 +286,59 @@ function saveData() {
 
     localStorage.setItem("students", JSON.stringify(students));
 }
+
+
+
+// ************************************************* Dark Mode ********************************************************* //
+
+const toggleButton = document.getElementById("darkModeToggle");
+
+// Function to update button text
+function updateButtonText() {
+  if (document.body.classList.contains("dark-mode")) {
+    toggleButton.textContent = "Toggle Light Mode";
+  } else {
+    toggleButton.textContent = "Toggle Dark Mode";
+  }
+}
+
+// Check for saved user preference
+if (localStorage.getItem("darkMode") === "enabled") {
+  document.body.classList.add("dark-mode");
+}
+
+// Set initial button text
+updateButtonText();
+
+// Toggle dark mode and update button text
+toggleButton.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+
+  if (document.body.classList.contains("dark-mode")) {
+    localStorage.setItem("darkMode", "enabled");
+  } else {
+    localStorage.setItem("darkMode", "disabled");
+  }
+
+  updateButtonText(); // Update button text dynamically
+});
+
+
+// ************************************************* Back to top ********************************************************* //
+
+
+const backToTopButton = document.getElementById("backToTop");
+
+// Show button when scrolling down
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) {
+    backToTopButton.classList.add("show");
+  } else {
+    backToTopButton.classList.remove("show");
+  }
+});
+
+// Scroll to top when clicked
+backToTopButton.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
