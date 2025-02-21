@@ -13,100 +13,95 @@
 
 		<title>School Managment System</title>
 		<style>
-* {
-  box-sizing:border-box;
-}
-
-.main {
-	justify-content: center;
-margin: auto;
-  width:60%; /* The width is 60%, by default */
-}
-
-
-
-/* Use a media query to add a break point at 800px: */
-@media screen and (max-width:800px) {
- .main {
-    width:100%; /* The width is 100%, when the viewport is 800px or smaller */
-  }
-}
-</style>
+		* {
+			box-sizing:border-box;
+		}
+		.main {
+			justify-content: center;
+			margin: auto;
+			width:60%; /* The width is 60%, by default */
+		}
+		/* Use a media query to add a break point at 800px: */
+		@media screen and (max-width:800px) {
+			.main {
+				width:100%; /* The width is 100%, when the viewport is 800px or smaller */
+			}
+		}
+		</style>
 	</head>
 
 	<body>
-
-<div class = "main">
-
+		
+		<div class = "main">
 			<form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
-			<h1>Students Management System</h1>
-		    <h2> Student GPA Form </h2>
-			<div>
-				<label>Student Name:</label>
-				<input type="text" name="name" id="name"  />
-			</div>
 
-			<label class="validation-error hide" id="nameValidationError">! This field is required.</label>
+				<button id="darkModeToggle" type="button" >Toggle Dark Mode</button>
+				<button id="backToTop" type="button" title="Go to top">&uarr;</button>
 
-			<div>
-				<label>Student ID:</label>
-				<input type="number" name="idNumber" id="idNumber"  />
-			</div>
+				<h1>School Managment System </h1>
+		    	<h2> Student GPA Form </h2>
+				
+				<div>
+					<label>Student Name:</label>
+					<input type="text" name="name" id="name"  />
+				</div>
 
-			<div>
-			    <label>Student GPA:</label>
-	     	    <input type="number" name="gpa" id="gpa" min="0.0" max="4.0" step="0.01"/>
-			</div>
+				<label class="validation-error hide" id="nameValidationError">! This field is required.</label>
 
-			<div  class="form-action-buttons">
-				<input  type="submit" value="Submit">
-			</div>
+				<div>
+					<label>Student ID:</label>
+					<input type="number" name="idNumber" id="idNumber"  />
+				</div>
 
+				<div>
+			    	<label>Student GPA:</label>
+	     	    	<input type="number" name="gpa" id="gpa" min="0.0" max="4.0" step="0.01"/>
+				</div>
+
+				<div class="form-action-buttons">
+					<input  type="submit" value="Submit">
+				</div>
 			</form>
-
-</div>
-
-</br>
-
-<div>
-    <button onclick="exportToJSON()">Export as JSON</button>
-    <button onclick="exportToCSV()">Export as CSV</button>
-    <input type="file" id="importFile" accept=".json, .csv" style="display: none;" onchange="importFile(event)">
-    <button onclick="document.getElementById('importFile').click()">Import JSON/CSV</button>
-	<button class="button" type="button" style="color: red;" onclick="showClearConfirmation()">Clear All Data</button>
-</div>
-
-
-
-<!-- Modal HTML -->
-<div id="deleteModal" class="modal">
-	<div class="modal-content">
-	  <span class="close">&times;</span>
-	  <p>Are you sure you want to delete this record?</p>
-	  <button id="confirmDelete">Yes</button>
-	  <button id="cancelDelete">No</button>
+		</div>
+	</br>
+	
+	<div>
+    	<button onclick="exportToJSON()">Export as JSON</button>
+    	<button onclick="exportToCSV()">Export as CSV</button>
+    	<input type="file" id="importFile" accept=".json, .csv" style="display: none;" onchange="importFile(event)">
+    	<button onclick="document.getElementById('importFile').click()">Import JSON/CSV</button>
+		<button class="deletebutton" type="button" onclick="showClearConfirmation()">Clear All Data</button>
 	</div>
-  </div>
+	
+	<!-- Modal HTML -->
+	<div id="deleteModal" class="modal">
+		<div class="modal-content">
+	  		<span class="close">&times;</span>
+	  		<p>Are you sure you want to delete this record?</p>
+	  		<button id="confirmDelete">Yes</button>
+	  		<button id="cancelDelete">No</button>
+		</div>
+  	</div>
 
-<div class="main">
-	<table class="list" id="studentList">
-	<thead>
-	<tr>
-		<th>Student Name</th>
-		<th>Student ID</th>
-		<th>Student GPA</th>
-		<th>Edit</th>
-		<th>Delete</th>
-	</tr>
-    </thead>
-	<tbody>
-    </tbody>
+	<div class="main">
+		<table class="list" id="studentList">
+			<thead>
+				<tr>
+					<th>Student Name</th>
+					<th>Student ID</th>
+					<th>Student GPA</th>
+					<th>Edit</th>
+					<th>Delete</th>
+				</tr>
+			</thead>
 
-    </table>
-	</td>
-	</tr>
-    </table>
-</div>
-		<script src="./src/main.js"></script>
+			<tbody></tbody>
+
+    	</table>
+		</td>
+		</tr>
+    	</table>
+	</div>
+	<script src="./src/main.js"></script>
 	</body>
 </html>
