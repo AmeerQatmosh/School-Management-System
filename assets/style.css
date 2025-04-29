@@ -36,7 +36,7 @@ body.dark-mode label {
 body.dark-mode input[type=text] {
   background-color: #4b5563;
   color: white;
-  border: 1px solid white;
+  border: 1px solid rgb(194, 188, 188);
 }
 
 body.dark-mode input[type=number] {
@@ -355,9 +355,9 @@ body.dark-mode #cancelDelete {
   position: fixed;
   top: 20px;
   right: 20px;
-  background: #333;
-  color: white;
-  border: none;
+  background: #f0f8ff;
+  color: black;
+  border: 1px solid #ddd;
   padding: 10px 15px;
   border-radius: 50px;
   cursor: pointer;
@@ -366,6 +366,18 @@ body.dark-mode #cancelDelete {
 
 #darkModeToggle:hover {
   background: #555;
+  color: white;
+}
+
+body.dark-mode #darkModeToggle {
+  background: #1f2937;
+  color:white;
+  border:none;
+
+  &:hover {
+    background-color: lightgray;
+    color: black;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -373,8 +385,8 @@ body.dark-mode #cancelDelete {
     position: absolute;
     top: 10px;
     right: 10px;
-    background: #333;
-    color: white;
+    background: #f0f8ff;
+    color: black;
     padding:  10px 15px;
     cursor: pointer;
   }
@@ -386,9 +398,9 @@ body.dark-mode #cancelDelete {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #333;
-  color: white;
-  border: none;
+  background: #f0f8ff;
+  color: black;
+  border: 1px solid #ddd;
   padding: 10px 15px;
   border-radius: 50%;
   cursor: pointer;
@@ -400,7 +412,17 @@ body.dark-mode #cancelDelete {
 /* Hover effect */
 #backToTop:hover {
   background: #555;
-  transform: scale(1.1);
+  color: white;
+}
+
+body.dark-mode #backToTop {
+  background: #1f2937;
+  color: white;
+  border: none;
+  &:hover {
+    background-color: lightgray;
+    color: black;
+  }
 }
 
 /* Show button when scrolling */
