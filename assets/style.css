@@ -191,7 +191,7 @@ input[type=submit]:hover {
 a {
   cursor: pointer;
   text-decoration: none;
-  color: #3366cc;
+  color: #3366cc;  
   margin-right: 4px;
 }
 
@@ -355,8 +355,8 @@ body.dark-mode #cancelDelete {
   position: fixed;
   top: 20px;
   right: 20px;
-  background: #f0f8ff;
-  color: black;
+  background: #e0f0fe;
+  color: #333;
   border: 1px solid #ddd;
   padding: 10px 15px;
   border-radius: 50px;
@@ -365,18 +365,16 @@ body.dark-mode #cancelDelete {
 }
 
 #darkModeToggle:hover {
-  background: #555;
-  color: white;
+  background: #afd4f5;
 }
 
 body.dark-mode #darkModeToggle {
-  background: #1f2937;
-  color:white;
+  background: #2b394c;
+  color: #ddd;
   border:none;
 
   &:hover {
-    background-color: lightgray;
-    color: black;
+    background-color: #4b6282;
   }
 }
 
@@ -398,8 +396,8 @@ body.dark-mode #darkModeToggle {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #f0f8ff;
-  color: black;
+  background: #e0f0fe;
+  color: #333;
   border: 1px solid #ddd;
   padding: 10px 15px;
   border-radius: 50%;
@@ -411,17 +409,15 @@ body.dark-mode #darkModeToggle {
 
 /* Hover effect */
 #backToTop:hover {
-  background: #555;
-  color: white;
+  background: #afd4f5;
 }
 
 body.dark-mode #backToTop {
-  background: #1f2937;
-  color: white;
+  background: #2b394c;
+  color: #ddd;
   border: none;
   &:hover {
-    background-color: lightgray;
-    color: black;
+    background-color: #4b6282;
   }
 }
 
